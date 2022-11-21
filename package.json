@@ -17,6 +17,7 @@
     "@astrojs/solid-js": "^1.2.3",
     "@astrojs/tailwind": "^2.1.2",
     "@babel/core": ">=7.0.0 <8.0.0",
+    "@fontsource/calligraffitti": "^4.5.10",
     "@fontsource/crete-round": "^4.5.9",
     "@fontsource/monoton": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
