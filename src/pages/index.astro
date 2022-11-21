@@ -1,8 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import CustomParticles from '../components/Particles';
+import { Bubbles } from '../components/Particles';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import logoSmall from '../logo-small.png';
+import logoSmall from '../assets/logo-small.png';
 ---
 
 <!DOCTYPE html>
@@ -13,7 +13,9 @@ import logoSmall from '../logo-small.png';
   <body>
     <main class="h-screen w-full bg-gray-800">
       <div class="w-full p-8 flex items-center justify-center flex-col h-full">
-        <CustomParticles client:load />
+        <Fragment>
+          <Bubbles client:only="solid" />
+        </Fragment>
         <div class="w-full h-full flex items-center justify-center flex-col">
           <img
             src={logoSmall}
