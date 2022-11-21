@@ -7,6 +7,7 @@ specifiers:
   '@astrojs/solid-js': ^1.2.3
   '@astrojs/tailwind': ^2.1.2
   '@babel/core': '>=7.0.0 <8.0.0'
+  '@fontsource/calligraffitti': ^4.5.10
   '@fontsource/crete-round': ^4.5.9
   '@fontsource/monoton': ^4.5.10
   '@fontsource/roboto': ^4.5.8
@@ -24,6 +25,7 @@ dependencies:
   '@astrojs/solid-js': 1.2.3_35qgajjoxpxbpcnuyad4bewoni
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.4
   '@babel/core': 7.20.2
+  '@fontsource/calligraffitti': 4.5.10
   '@fontsource/crete-round': 4.5.9
   '@fontsource/monoton': 4.5.10
   '@fontsource/roboto': 4.5.8
@@ -482,6 +484,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/calligraffitti/4.5.10:
+    resolution: {integrity: sha512-FcDCsXz5l17RzgQ2D/Uhiu3amorAX7og3c2odZuSVyqoJmK7J7LEbdrWry2o2kUocudq+7nZeueRELgozMHSBg==}
+    dev: false
 
   /@fontsource/crete-round/4.5.9:
     resolution: {integrity: sha512-2xP2Y4CrKniiESYCmLVKISLNjkGOpvHKm0f9lgnGA1Kuic+jZSpp82ggsE1xaU8yyzpk/BvinsFSsj7JSWjBZA==}
