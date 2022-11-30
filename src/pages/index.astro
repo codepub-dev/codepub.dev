@@ -11,22 +11,22 @@ import logoSmall from '../assets/logo-small.png';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <main class="h-screen w-full bg-gray-800">
-      <div class="w-full p-8 flex items-center justify-center flex-col h-full">
+    <main class="min-h-screen w-screen bg-gray-800 overflow-x-hidden">
+      <div class="w-full p-8 flex items-center justify-center flex-col h-screen">
         <Fragment>
           <Bubbles client:only="solid" />
         </Fragment>
         <div class="w-full h-full flex items-center justify-center flex-col">
           <img
             src={logoSmall}
-            class="h-64"
+            class="h-32 md:h-52 xl:h-64"
             style={{
               perspective: '800px',
               transform: 'rotate3d(0, 0, -1, 5deg)',
             }}
           />
           <div
-            class="text-8xl font-light text-center mb-9"
+            class="text-4xl md:text-6xl xl:text-8xl font-light text-center mb-9"
             style={{
               fontFamily: 'Monoton',
               color: '#fee',
@@ -42,7 +42,7 @@ import logoSmall from '../assets/logo-small.png';
           </div>
           <div class="relative w-[500px]">
             <div 
-              class="absolute text-5xl w-[280px] top-[-45px] right-[0px] rotate-[-8deg]"
+              class="absolute text-2xl md:text-4xl xl:text-5xl w-[280px] top-[-45px] right-[0px] rotate-[-8deg]"
               style={{
                 fontFamily: 'calligraffitti',
                 color: '#fef',
@@ -53,13 +53,22 @@ import logoSmall from '../assets/logo-small.png';
             </div>
           </div>
           <p
-            class="text-white text-xl sub-text text-center mt-12"
+            class="text-white text-md md:text-xl xl:text-2xl sub-text text-center mt-20"
             style={{
               textShadow: '0 3px 30px #000',
               fontFamily: 'Crete Round',
             }}
           >
-            =[ The podcast about 🍻 and 💻 ]=
+            The podcast for nerds with refined taste. May include 🍻 and 💻
+          </p>
+          <p
+          class="text-white text-md md:text-xl xl:text-2xl sub-text text-center mt-4"
+          style={{
+            textShadow: '0 3px 30px #000',
+            fontFamily: 'Crete Round',
+          }}
+          >
+            =Coming soon, to a podcast player nearby=
           </p>
         </div>
       </div>
