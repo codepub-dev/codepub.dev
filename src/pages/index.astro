@@ -11,67 +11,73 @@ import logoSmall from '../assets/logo-small.png';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <main class="min-h-screen w-screen bg-gray-800 overflow-x-hidden">
-      <div class="w-full p-8 flex items-center justify-center flex-col h-screen">
-        <Fragment>
-          <Bubbles client:only="solid" />
-        </Fragment>
-        <div class="w-full h-full flex items-center justify-center flex-col">
-          <img
-            src={logoSmall}
-            class="h-32 md:h-52 xl:h-64"
-            style={{
-              perspective: '800px',
-              transform: 'rotate3d(0, 0, -1, 5deg)',
-            }}
-          />
-          <div
-            class="text-4xl md:text-6xl xl:text-8xl font-light text-center mb-9"
-            style={{
-              fontFamily: 'Monoton',
-              color: '#fee',
-              textShadow:
-                '0 -40px 100px, 0 0 2px, 0 0 1em #ffbe0b, 0 0 0.5em #ffbe0b, 0 0 0.1em #ffbe0b, 0 5px 3px #000',
-            }}
-          >
-            c
-            <span class="blinking-letter">o</span>
-            de
-            <span class="blinking-letter">p</span>
-            ub
+    <main class="bg-gray-800 min-h-screen">
+      <div class="w-screen bg-gray-800 overflow-x-hidden">
+        <div class="w-full p-8 flex items-center justify-center flex-col">
+          <div class="relative">
+            <Bubbles client:only="solid" />
           </div>
-          <div class="relative w-[500px]">
-            <div 
-              class="absolute text-2xl md:text-4xl xl:text-5xl w-[280px] top-[-45px] right-[0px] rotate-[-8deg]"
+          <div class="w-full h-full flex items-center flex-col pt-10">
+            <img
+              src={logoSmall}
+              class="h-32 md:h-52 xl:h-64"
               style={{
-                fontFamily: 'calligraffitti',
-                color: '#fef',
+                perspective: '800px',
+                transform: 'rotate3d(0, 0, -1, 5deg)',
+              }}
+            />
+            <div
+              class="text-4xl md:text-6xl xl:text-8xl font-light text-center mb-9"
+              style={{
+                fontFamily: 'Monoton',
+                color: '#fee',
                 textShadow:
-                  '0 -40px 100px, 0 0 2px, 0 0 1em #ffbeff, 0 0 0.5em #ffbeff, 0 0 0.1em #ffbeff, 0 5px 3px #000',
-              }}>
-              Code on tap
+                  '0 -40px 100px, 0 0 2px, 0 0 1em #ffbe0b, 0 0 0.5em #ffbe0b, 0 0 0.1em #ffbe0b, 0 5px 3px #000',
+              }}
+            >
+              c
+              <span class="blinking-letter">o</span>
+              de
+              <span class="blinking-letter">p</span>
+              ub
             </div>
+            <div class="relative w-[500px]">
+              <div 
+                class="absolute text-2xl md:text-4xl xl:text-5xl w-[280px] top-[-45px] right-[0px] rotate-[-8deg]"
+                style={{
+                  fontFamily: 'calligraffitti',
+                  color: '#fef',
+                  textShadow:
+                    '0 -40px 100px, 0 0 2px, 0 0 1em #ffbeff, 0 0 0.5em #ffbeff, 0 0 0.1em #ffbeff, 0 5px 3px #000',
+                }}>
+                Code on tap
+              </div>
+            </div>
+            <p
+              class="text-white text-lg sub-text text-center mt-20 max-w-[640px] px-8"
+              style={{
+                textShadow: '0 3px 30px #000',
+                fontFamily: 'Crete Round',
+              }}
+            >
+            Welcome to CodePub, your bi-weekly dose of technology, coding, "war stories," and, most importantly, people. Join us as we delve into the development world, exploring these people's stories, careers, and much more. Whether you're a seasoned developer or just starting, this podcast is your opportunity to learn, grow and connect with the tech community. So grab your headphones and jump in!
+            </p>
           </div>
-          <p
-            class="text-white text-md md:text-xl xl:text-2xl sub-text text-center mt-20"
-            style={{
-              textShadow: '0 3px 30px #000',
-              fontFamily: 'Crete Round',
-            }}
-          >
-            The podcast for nerds with refined taste. May include 🍻 and 💻
-          </p>
-          <p
-          class="text-white text-md md:text-xl xl:text-2xl sub-text text-center mt-4"
-          style={{
-            textShadow: '0 3px 30px #000',
-            fontFamily: 'Crete Round',
-          }}
-          >
-            =Coming soon, to a podcast player nearby=
-          </p>
         </div>
       </div>
+      <section class="bg-gray-800 relative">
+        <div class="absolute z-[9999] bg-gray-800 w-full flex flex-col items-center justify-center">
+          <article class="w-full max-w-[420px] lg:max-w-[600px] bg-gray-900 rounded p-5 mb-10">
+            <h1 class="text-white text-2xl mb-8">S01E01: A beer with... Boro Sitnikovski</h1>
+
+            <p class="text-white mb-8">
+              In the inaugural episode of CodePub - Boro Sitnikovski. A hacker, author, and a lot more. Also, part of the DevEx team at Automattic. We discuss his career path, interests, and his take on DevEx, functional programming, and designing your programming language. And a lot more.
+            </p>
+
+            <iframe width="100%" frameborder="0" scrolling="no" style="width: 100%; overflow: hidden;" src="https://pod.codepub.dev/@codepub/episodes/a-beer-with-boro-sitnikovski/embed/dark-transparent"></iframe>
+          </article>
+        </div>
+      </section>
     </main>
   </body>
 </html>
