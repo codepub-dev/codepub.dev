@@ -11,12 +11,12 @@ import logoSmall from '../assets/logo-small.png';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <main class="bg-gray-800 min-h-screen">
-      <div class="w-screen bg-gray-800 overflow-x-hidden">
-        <div class="w-full p-8 flex items-center justify-center flex-col">
-          <div class="relative">
-            <Bubbles client:only="solid" />
-          </div>
+    <main class="bg-gray-800 min-h-screen w-screen overflow-x-hidden">
+      <div class="w-full bg-gray-800">
+        <div class="relative z-10">
+          <Bubbles client:only="solid" />
+        </div>
+        <div class="w-full p-8 flex items-center justify-center flex-col relative z-20">
           <div class="w-full h-full flex items-center flex-col pt-10">
             <img
               src={logoSmall}
