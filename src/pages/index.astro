@@ -3,6 +3,11 @@ import BaseHead from '../components/BaseHead.astro';
 import { Bubbles } from '../components/Particles';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import logoSmall from '../assets/logo-small.png';
+
+import { getFeed } from '../data/podRSS';
+
+const res = await getFeed();
+console.log(res.entries[0]);
 ---
 
 <!DOCTYPE html>
