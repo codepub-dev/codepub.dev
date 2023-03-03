@@ -1,0 +1,61 @@
+---
+import BigCard from '../components/BigCard.astro';
+import { getFeed } from '../data/podRSS';
+import Default from '../Layouts/default.astro';
+
+// const { pid, eid } = Astro.props;
+
+export const getStaticPaths = async () => {
+  const res = await getFeed();
+
+  return res.entries?.map((e) => ({
+    episode: e,
+    params: { sid: e.fullData['itunes:season'], eid: e.fullData['itunes:episode'] },
+  }));
+};
+
+const res = await getFeed();
+
+const { eid, sid } = Astro.params;
+
+const data = res.entries?.find(
+  (e) => e.fullData['itunes:episode'] === parseInt(eid, 10) && e.fullData['itunes:season'] === parseInt(sid, 10),
+);
+---
+
+<Default>
+  <div class="relative w-full flex items-center justify-center lg:h-[100px] mb-10">
+    <BigCard
+      title={data.title || ''}
+      image={data.fullData['itunes:image']['@_href']}
+      season={data.fullData['itunes:season']}
+      episode={data.fullData['itunes:episode']}
+      file={data.fullData.enclosure['@_url']}
+      url={data.link || ''}
+      date={data.published}
+    />
+  </div>
+
+  <section class="flex flex-col items-center justify-center h-full px-6">
+    <article
+      class="prose lg:prose-xl max-w-prose w-full pb-10 mb-10 border-b border-gray-400"
+      set:html={data.fullData.description}
+    />
+    <article class="prose lg:prose-xl max-w-prose w-full mb-10">
+      <h3>Credits</h3>
+      {
+        data.fullData['podcast:person'].map((p) => (
+          <div class="flex items-center">
+            <img src={p['@_img']} class="w-[160px] h-[160px] rounded-full mr-6" />
+            <div class="flex flex-col">
+              <h4>
+                <b>{p['#text']}</b> - <span>{p['@_role']}</span>
+              </h4>
+              <a href={p['@_href']}>{p['@_href']}</a>
+            </div>
+          </div>
+        ))
+      }
+    </article>
+  </section>
+</Default>

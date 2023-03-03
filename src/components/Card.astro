@@ -1,0 +1,60 @@
+---
+import Icon from 'astro-icon';
+import { format } from 'date-fns';
+
+interface Props {
+  title: string;
+  image: string;
+  season: number;
+  episode: number;
+  file: string;
+  url: string;
+  date: string;
+  description: string;
+}
+
+const { title, image, season, episode, file, url, date, description } = Astro.props;
+
+const formatted = format(new Date(date), 'yyyy-mm-dd');
+---
+
+<a href={`/season-${season}-episode-${episode}`} class="lg:w-[80%] max-w-[1030px]">
+  <article class="bg-white lg:rounded-2xl w-full elevation-4 flex overflow-hidden mb-6">
+    <img
+      src={image}
+      class="hidden md:block md:w-[248px] lg:w-[228px] h-full min-h-[190px] max-h-[248px] object-cover"
+    />
+    <section class="px-10 py-6 w-full">
+      <div class="flex justify-between">
+        <h1
+          class="text-xl md:text-2xl lg:text-3xl font-bold mb-4"
+          style={{
+            fontFamily: 'Crete Round',
+          }}
+        >
+          {title}
+        </h1>
+        <Icon name="iconoir:arrow-right" height="36px" />
+      </div>
+      <p class="font-light w-full mb-8 text-gray-500">
+        Season {season} • Episode {episode} • Published on: {formatted}
+      </p>
+      <p>{description}</p>
+      <!-- <audio id="podcast-player" controls>
+      <source src={file} type="audio/mp3" />
+      <track kind="captions" label="subtitle" src={`/vtt/s${season}e${episode}.vtt`} srclang="en" />
+    </audio> -->
+    </section>
+  </article>
+</a>
+
+<!-- <script>
+  import Plyr from 'plyr';
+
+  const player = new Plyr('#podcast-player', {
+    markers: {
+      enabled: true,
+      // points: {}
+    },
+  });
+</script> -->

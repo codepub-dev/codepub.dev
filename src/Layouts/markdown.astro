@@ -1,0 +1,13 @@
+---
+import Default from './default.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Default>
+  <div class="flex items-center justify-center h-full w-full pt-[60px] pb-[60px] px-6">
+    <article class="prose lg:prose-xl max-w-prose w-full mb-8">
+      <slot />
+    </article>
+  </div>
+</Default>

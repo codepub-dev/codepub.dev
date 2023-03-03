@@ -1,0 +1,181 @@
+---
+import { Icon } from 'astro-icon';
+import Navigation from './Navigation.astro';
+import NeonLogo from './NeonLogo.astro';
+---
+
+<section id="hero" class="bg-gray-800 pb-10 lg:pb-0 lg:h-[650px] w-full flex flex-col items-center">
+  <Navigation />
+  <a href="/">
+    <div
+      class="w-lg flex items-center justify-center flex-col-reverse lg:flex-row max-h-[450px] lg:max-h-[280px] mt-12"
+    >
+      <NeonLogo />
+      <div class="w-full flex items-center justify-center z-20 lg:mt-8 h-52 md:h-52 xl:h-64 neon">
+        <Icon
+          name="logo-small"
+          class="h-52 md:h-52 xl:h-64 fill-zinc"
+          style={{
+            transform: 'rotate3d(0, 0, -1, 5deg)',
+          }}
+        />
+      </div>
+    </div>
+  </a>
+  <p
+    class="text-fuchsia-200 mt-10 text-lg px-8 max-w-md text-center font-bold"
+    style={{
+      fontFamily: 'Crete Round',
+    }}
+  >
+    A pint of technology, coding, "war stories," and, most importantly, people.
+  </p>
+</section>
+
+<style>
+  #hero {
+    background: linear-gradient(
+        180deg,
+        rgba(31, 41, 55, 0.96) 0%,
+        rgba(31, 41, 55, 0.97) 33%,
+        rgba(31, 41, 55, 0.98) 66%,
+        rgba(31, 41, 55, 1) 100%
+      ),
+      url(/hero.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .neon {
+    animation: flicker 7s linear infinite;
+  }
+
+  .neon svg {
+    filter: drop-shadow(3px 5px 3px #000);
+  }
+
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+
+    4% {
+      opacity: 0.9;
+    }
+
+    6% {
+      opacity: 0.85;
+    }
+
+    8% {
+      opacity: 0.95;
+    }
+
+    10% {
+      opacity: 0.9;
+    }
+
+    11% {
+      opacity: 0.922;
+    }
+
+    12% {
+      opacity: 0.9;
+    }
+
+    14% {
+      opacity: 0.95;
+    }
+
+    16% {
+      opacity: 0.98;
+    }
+
+    17% {
+      opacity: 0.9;
+    }
+
+    19% {
+      opacity: 0.93;
+    }
+
+    20% {
+      opacity: 0.99;
+    }
+
+    24% {
+      opacity: 1;
+    }
+
+    26% {
+      opacity: 0.94;
+    }
+
+    28% {
+      opacity: 0.98;
+    }
+
+    37% {
+      opacity: 0.93;
+    }
+
+    38% {
+      opacity: 0.5;
+    }
+
+    39% {
+      opacity: 0.96;
+    }
+
+    42% {
+      opacity: 1;
+    }
+
+    44% {
+      opacity: 0.97;
+    }
+
+    46% {
+      opacity: 0.94;
+    }
+
+    56% {
+      opacity: 0.9;
+    }
+
+    58% {
+      opacity: 0.9;
+    }
+
+    60% {
+      opacity: 0.99;
+    }
+
+    68% {
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 0.9;
+    }
+
+    72% {
+      opacity: 0.95;
+    }
+
+    93% {
+      opacity: 0.93;
+    }
+
+    95% {
+      opacity: 0.95;
+    }
+
+    97% {
+      opacity: 0.93;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+</style>

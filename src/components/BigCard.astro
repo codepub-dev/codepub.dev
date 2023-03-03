@@ -1,0 +1,67 @@
+---
+import Icon from 'astro-icon';
+import { format } from 'date-fns';
+
+interface Props {
+  title: string;
+  image: string;
+  season: number;
+  episode: number;
+  file: string;
+  url: string;
+  date: string;
+  newEpisode?: boolean;
+}
+
+const { title, image, season, episode, file, url, date, newEpisode } = Astro.props;
+
+const formatted = format(new Date(date), 'yyyy-mm-dd');
+---
+
+<article
+  class="bg-white lg:rounded-2xl lg:absolute lg:top-[-90px] w-full lg:w-[80%] max-w-[1030px] elevation-4 flex overflow-hidden"
+>
+  {
+    newEpisode && (
+      <div class="relative">
+        <span class="absolute text-2xl font-bold bg-lime-400 px-20 -rotate-45 left-[-81px] top-[5px]">New</span>
+      </div>
+    )
+  }
+  <img src={image} class="hidden md:block md:w-[140px] lg:w-[200px] h-full min-h-[190px] max-h-[200px] object-cover" />
+  <section class="px-10 py-6 w-full">
+    <div class="flex justify-between">
+      <a href={`/season-${season}-episode-${episode}`}>
+        <h1
+          class="text-xl md:text-2xl lg:text-3xl font-bold mb-4"
+          style={{
+            fontFamily: 'Crete Round',
+          }}
+        >
+          {title}
+        </h1>
+      </a>
+      <a href={`/season-${season}/episode-${episode}`}>
+        <Icon name="iconoir:arrow-right" height="36px" />
+      </a>
+    </div>
+    <p class="font-light w-full mb-8 text-gray-500">
+      Season {season} • Episode {episode} • Published on: {formatted}
+    </p>
+    <audio id="podcast-player" controls>
+      <source src={file} type="audio/mp3" />
+      <track kind="captions" label="subtitle" src={`/vtt/s${season}e${episode}.vtt`} srclang="en" />
+    </audio>
+  </section>
+</article>
+
+<script>
+  import Plyr from 'plyr';
+
+  const player = new Plyr('#podcast-player', {
+    markers: {
+      enabled: true,
+      // points: {}
+    },
+  });
+</script>

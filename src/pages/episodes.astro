@@ -1,0 +1,26 @@
+---
+import Card from '../components/Card.astro';
+import { getFeed } from '../data/podRSS';
+import Default from '../Layouts/default.astro';
+
+const res = await getFeed();
+---
+
+<Default>
+  <div class="relative flex flex-col items-center justify-center pt-8 pb-4 w-full">
+    {
+      res.entries?.map((ep) => (
+        <Card
+          title={ep.title || ''}
+          image={ep.fullData['itunes:image']['@_href']}
+          season={ep.fullData['itunes:season']}
+          episode={ep.fullData['itunes:episode']}
+          file={ep.fullData.enclosure['@_url']}
+          url={ep.link || ''}
+          date={ep.published}
+          description={ep.description}
+        />
+      ))
+    }
+  </div>
+</Default>

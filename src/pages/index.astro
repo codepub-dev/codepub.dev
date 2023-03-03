@@ -1,97 +1,85 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import { Bubbles } from '../components/Particles';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import logoSmall from '../assets/logo-small.png';
-
 import { getFeed } from '../data/podRSS';
+import BigCard from '../components/BigCard.astro';
+import Default from '../Layouts/default.astro';
+import Icon from 'astro-icon';
 
 const res = await getFeed();
-console.log(res.entries[0]);
+
+const latest = res.entries[0];
+const meta = res;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <main class="bg-gray-800 min-h-screen w-screen overflow-x-hidden">
-      <div class="w-full bg-gray-800">
-        <div class="relative z-10">
-          <Bubbles client:only="solid" />
-        </div>
-        <div class="w-full p-8 flex items-center justify-center flex-col relative z-20">
-          <div class="w-full h-full flex items-center flex-col pt-10">
-            <img
-              src={logoSmall}
-              class="h-32 md:h-52 xl:h-64"
-              style={{
-                perspective: '800px',
-                transform: 'rotate3d(0, 0, -1, 5deg)',
-              }}
-            />
-            <div
-              class="text-4xl md:text-6xl xl:text-8xl font-light text-center mb-9"
-              style={{
-                fontFamily: 'Monoton',
-                color: '#fee',
-                textShadow:
-                  '0 -40px 100px, 0 0 2px, 0 0 1em #ffbe0b, 0 0 0.5em #ffbe0b, 0 0 0.1em #ffbe0b, 0 5px 3px #000',
-              }}
-            >
-              c
-              <span class="blinking-letter">o</span>
-              de
-              <span class="blinking-letter">p</span>
-              ub
-            </div>
-            <div class="relative w-[500px]">
-              <div 
-                class="absolute text-2xl md:text-4xl xl:text-5xl w-[280px] top-[-45px] right-[0px] rotate-[-8deg]"
-                style={{
-                  fontFamily: 'calligraffitti',
-                  color: '#fef',
-                  textShadow:
-                    '0 -40px 100px, 0 0 2px, 0 0 1em #ffbeff, 0 0 0.5em #ffbeff, 0 0 0.1em #ffbeff, 0 5px 3px #000',
-                }}>
-                Code on tap
-              </div>
-            </div>
-            <p
-              class="text-white text-lg sub-text text-center mt-20 max-w-[640px] px-8"
-              style={{
-                textShadow: '0 3px 30px #000',
-                fontFamily: 'Crete Round',
-              }}
-            >
-            Welcome to CodePub, your bi-weekly dose of technology, coding, "war stories," and, most importantly, people. Join us as we delve into the development world, exploring these people's stories, careers, and much more. Whether you're a seasoned developer or just starting, this podcast is your opportunity to learn, grow and connect with the tech community. So grab your headphones and jump in!
-            </p>
-          </div>
-        </div>
-      </div>
-      <section class="bg-gray-800 relative">
-        <div class="absolute z-[9999] bg-gray-800 w-full flex flex-col items-center justify-center">
-          <article class="w-full max-w-[420px] lg:max-w-[600px] bg-gray-900 rounded p-5 mb-10">
-            <h1 class="text-white text-2xl mb-8">S01E02: A beer with... Wekoslav Stefanovski</h1>
-
-            <p class="text-white mb-8">
-              In the second episode of CodePub - Wekoslav Stefanovski. He's been around for a while now. Besides being someone who loves programming, he's one of the most prominent speakers in our corner of the planet. We talk about (functional) programming, community, mentoring, career progress, speaking, and much much more.
-            </p>
-
-            <iframe width="100%" frameborder="0" scrolling="no" style="width: 100%; overflow: hidden;" src="https://pod.codepub.dev/@codepub/episodes/a-beer-with-wekoslav-stefanovski/embed/dark-transparent"></iframe>
-          </article>
-          <article class="w-full max-w-[420px] lg:max-w-[600px] bg-gray-900 rounded p-5 mb-10">
-            <h1 class="text-white text-2xl mb-8">S01E01: A beer with... Boro Sitnikovski</h1>
-
-            <p class="text-white mb-8">
-              In the inaugural episode of CodePub - Boro Sitnikovski. A hacker, author, and a lot more. Also, part of the DevEx team at Automattic. We discuss his career path, interests, and his take on DevEx, functional programming, and designing your programming language. And a lot more.
-            </p>
-
-            <iframe width="100%" frameborder="0" scrolling="no" style="width: 100%; overflow: hidden;" src="https://pod.codepub.dev/@codepub/episodes/a-beer-with-boro-sitnikovski/embed/dark-transparent"></iframe>
-          </article>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+<Default>
+  <div class="relative w-full flex flex-col items-center justify-center mb-10">
+    <BigCard
+      title={`${latest.title}` || ''}
+      image={latest.fullData['itunes:image']['@_href']}
+      season={latest.fullData['itunes:season']}
+      episode={latest.fullData['itunes:episode']}
+      file={latest.fullData.enclosure['@_url']}
+      url={latest.link || ''}
+      date={latest.published}
+      newEpisode={true}
+    />
+    <div class="mt-[60px] lg:mt-[160px] w-full max-w-prose mb-8 px-6">
+      <h1 class="text-2xl font-bold">Find us and subscribe on:</h1>
+    </div>
+    <div class="flex flex-wrap w-full max-w-prose px-6">
+      <a
+        href="https://www.audible.com/pd/The-CodePub-Podcast-Podcast"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="amazon" width="40px" />
+      </a>
+      <a
+        href="https://podcastindex.org/podcast/6010767"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="antennapod" width="40px" />
+      </a>
+      <a
+        href="https://podcasts.apple.com/us/podcast/the-codepub-podcast/id1669738131"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="apple" width="40px" />
+      </a>
+      <a
+        href="https://deezer.page.link/FWAYvvczVQD5QKM19"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="deezer" width="40px" />
+      </a>
+      <a
+        href="https://podcasts.google.com/feed/aHR0cHM6Ly9wb2QuY29kZXB1Yi5kZXYvQGNvZGVwdWIvZmVlZC54bWw"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="google" width="40px" />
+      </a>
+      <a
+        href="https://pca.st/99gddxuh"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="pocketcasts" width="40px" />
+      </a>
+      <a
+        href="https://open.spotify.com/show/6wNY8ZQtKYsmfRGShrnE4T?si=8fd3808fd03c4c49"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="spotify" width="40px" />
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UCEecNTCyhHBmWmmj_WXqKWw"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="bi:youtube" width="40px" />
+      </a>
+      <a
+        href="https://pod.codepub.dev/@codepub/feed.xml"
+        class="mr-4 mb-4 block border-black rounded-full border p-2 w-[60px] h-[60px] flex items-center justify-center"
+      >
+        <Icon name="mdi:rss-box" width="40px" />
+      </a>
+    </div>
+  </div>
+</Default>

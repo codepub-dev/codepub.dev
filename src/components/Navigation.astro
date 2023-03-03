@@ -1,0 +1,23 @@
+---
+import Icon from 'astro-icon';
+---
+
+<header class="w-full flex flex-col items-center py-8">
+  <nav>
+    <ul class="flex text-md lg:text-xl">
+      <li><a href="/about">About</a></li>
+      <li><a href="/episodes">Episodes</a></li>
+      <li><a href="/sponsorship">Sponsorship</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  a {
+    @apply text-white font-bold border-b mb-2 block hover:text-[#ffbe0b] hover:border-[#ffbe0b] transition-colors duration-300;
+  }
+
+  li {
+    @apply px-3 lg:px-4;
+  }
+</style>

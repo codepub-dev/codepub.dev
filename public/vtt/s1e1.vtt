@@ -1,0 +1,1448 @@
+WEBVTT
+
+00:00.000 --> 00:04.000
+Hello, and welcome to the first ever CodePop podcast.
+
+00:04.000 --> 00:09.160
+It is my exceptional pleasure today to have Boron, a hacker, a math nerd, an ex-colleague
+
+00:09.160 --> 00:10.160
+and a friend.
+
+00:10.160 --> 00:14.600
+He is also an author of three books and a functional programming aficionado.
+
+00:14.600 --> 00:15.600
+Welcome Boron.
+
+00:15.600 --> 00:16.600
+Thank you for the great introduction.
+
+00:16.600 --> 00:21.000
+It's a pleasure to be present here at the first CodePop podcast ever, and I'm looking
+
+00:21.000 --> 00:23.480
+forward to many more podcasts in the future.
+
+00:23.480 --> 00:28.440
+All right, we'd be happy to provide more in the future again.
+
+00:28.440 --> 00:30.880
+So let's first talk origins.
+
+00:30.880 --> 00:33.320
+How did you get into programming in the first place?
+
+00:33.320 --> 00:34.320
+Yes.
+
+00:34.320 --> 00:40.440
+So I think it starts usually, as most of us probably, I don't want to generalize a lot,
+
+00:40.440 --> 00:45.360
+but I would say for me, it started with video games as usual.
+
+00:45.360 --> 00:51.120
+So there were two main drivers in my life, which kind of led me to where I am right now.
+
+00:51.120 --> 00:54.280
+I want to believe that those two are the most important.
+
+00:54.280 --> 01:00.320
+So one driver is me having access to a computer thanks to my dad, which was also and is still
+
+01:00.320 --> 01:03.080
+also working with computers to this day.
+
+01:03.080 --> 01:10.320
+So this means even from my youngest ages, I had this access to which I consider a privilege.
+
+01:10.320 --> 01:16.960
+And then the other driver is genuine curiosity into things and just trying to understand
+
+01:16.960 --> 01:23.540
+how things work and why they work that way and just getting a general sense.
+
+01:23.540 --> 01:27.320
+So like I said, it started with video games at this time.
+
+01:27.320 --> 01:32.080
+I think the two of the two main drivers, only one of them was present, which is access to
+
+01:32.080 --> 01:33.240
+a computer.
+
+01:33.240 --> 01:35.540
+The second driver came a bit later.
+
+01:35.540 --> 01:42.880
+So I was only, you know, this little kid who was just interested in computers, just seemed
+
+01:42.880 --> 01:46.800
+like this magical device that you could do stuff with it.
+
+01:46.800 --> 01:51.720
+So there is this game which I remember even to this day.
+
+01:51.720 --> 01:57.000
+It's called Crystal Caves from Apogee Software, and it's like this 2D platformer.
+
+01:57.000 --> 02:02.360
+And as far as I can remember, this was my first game that I ever started playing on
+
+02:02.360 --> 02:09.240
+my x86 machine, I believe it was, some Pentium, at the age of three.
+
+02:09.240 --> 02:14.880
+So it's like this little guy that throws out, that fires rockets, has this rocket launcher
+
+02:14.880 --> 02:18.600
+that you can use to defeat enemies and whatever.
+
+02:18.600 --> 02:21.160
+And I think this is where it all began.
+
+02:21.160 --> 02:23.000
+Yeah, that's a common story.
+
+02:23.000 --> 02:24.600
+Most of us started off that way.
+
+02:24.600 --> 02:25.600
+That's true.
+
+02:25.600 --> 02:26.960
+So you did mention a computer.
+
+02:26.960 --> 02:29.360
+What was that first computer you used?
+
+02:29.360 --> 02:33.960
+I believe it was some, I don't, I don't remember the technical details exactly because I was
+
+02:33.960 --> 02:39.800
+just like this little kid who still didn't, you know, just like the curiosity came a bit
+
+02:39.800 --> 02:45.080
+later, like I said, and at this point in my life, me being three years old, you're just
+
+02:45.080 --> 02:49.960
+like this little kid who sees some graphics on the, on the screen and just like presses
+
+02:49.960 --> 02:51.440
+the buttons and something happens.
+
+02:51.440 --> 02:57.520
+And this is like the wow moment, moment that you, that you kind of like appreciate a lot.
+
+02:57.520 --> 03:04.280
+But at the same time, at that time, I was not really interested into how, what, what,
+
+03:04.280 --> 03:06.120
+what is this, what, what, what is this computer?
+
+03:06.120 --> 03:07.440
+What, what does it have inside?
+
+03:07.440 --> 03:08.840
+Like, what, what are the specs?
+
+03:08.840 --> 03:13.940
+And so I, I for sure know it was some 286 or perhaps even 386.
+
+03:13.940 --> 03:17.880
+So this was back in 91, 92.
+
+03:17.880 --> 03:22.640
+So maybe somebody can correct me if I'm wrong, but I believe it was like 286 at that time.
+
+03:22.640 --> 03:23.640
+Right.
+
+03:23.640 --> 03:24.640
+So, okay.
+
+03:24.640 --> 03:26.480
+How did you actually got into programming?
+
+03:26.480 --> 03:28.200
+What was your first programming language?
+
+03:28.200 --> 03:30.040
+Yeah, it's a very good question.
+
+03:30.040 --> 03:37.520
+I think there was a natural progression from video games to programming.
+
+03:37.520 --> 03:45.640
+And the most interesting bit is that I really have not started programming before actually
+
+03:45.640 --> 03:47.540
+tackling crackers and trainers.
+
+03:47.540 --> 03:49.140
+They were called like that back then.
+
+03:49.140 --> 03:52.920
+So a trainer is basically like this software that allows you, like, let's say you're playing
+
+03:52.920 --> 03:58.200
+some game that you have like a thousand coins and you need, I don't know, 2000 coins to,
+
+03:58.200 --> 03:59.420
+to buy this weapon or whatever.
+
+03:59.420 --> 04:04.240
+So a trainer is a, is a, is a special program that what it does is attaches to the game
+
+04:04.240 --> 04:09.440
+process and it's modifying the memory values of the, of the game itself.
+
+04:09.440 --> 04:12.620
+So you don't have to do any work in the game.
+
+04:12.620 --> 04:17.000
+You just like launch this application and suddenly you have like all the money you need
+
+04:17.000 --> 04:18.280
+to make the progress in the game.
+
+04:18.280 --> 04:25.200
+So this was one of the steps in the progression that, that took place.
+
+04:25.200 --> 04:32.160
+So cracking and trainers, you know, like those groups back then, I don't know, Razer, 1911,
+
+04:32.160 --> 04:34.960
+Fairlight or whoever they are.
+
+04:34.960 --> 04:41.440
+It's combined with chip tunes and all of this stuff, like this blip blop music you listen.
+
+04:41.440 --> 04:45.400
+It's what really felt magical to me at the time.
+
+04:45.400 --> 04:51.800
+So before starting into programming, I was really interested in, okay, how these trainers
+
+04:51.800 --> 04:52.800
+work.
+
+04:52.800 --> 04:53.800
+Right.
+
+04:53.800 --> 05:00.400
+So I, you know, of course, you know, you cannot understand these things like before you actually
+
+05:00.400 --> 05:03.440
+get into programming.
+
+05:03.440 --> 05:09.320
+So the first programming language, I would say, as far as I can remember, is quick basic.
+
+05:09.320 --> 05:14.480
+And to relate to what I was saying earlier, there was this game, I think it was Monopoly
+
+05:14.480 --> 05:18.760
+or something where in quick basic, you just like have the source of the source, the whole
+
+05:18.760 --> 05:19.960
+source code of the game.
+
+05:19.960 --> 05:24.520
+And what you can do is modify the code and then you actually affect the game and you
+
+05:24.520 --> 05:26.840
+can give yourself money or whatever.
+
+05:26.840 --> 05:33.040
+So it started with quick basic, but it wasn't like any special kind of building rockets,
+
+05:33.040 --> 05:35.040
+rocket ships or whatever.
+
+05:35.040 --> 05:39.840
+It was more like, I have this source code, I have this game, I'm just going to give myself
+
+05:39.840 --> 05:40.840
+more money.
+
+05:40.840 --> 05:43.760
+And, you know, that's, that's how it started all of it.
+
+05:43.760 --> 05:44.760
+Nice, nice.
+
+05:44.760 --> 05:48.360
+So that's kind of nostalgic for me as well, because we're a similar age.
+
+05:48.360 --> 05:55.120
+So what were the games you did use trainers and stuff like that for the most part?
+
+05:55.120 --> 05:58.200
+This is on a tangent, but still, I think it's relevant to the story.
+
+05:58.200 --> 06:00.360
+Yeah, it's a very good question.
+
+06:00.360 --> 06:05.840
+As far as I can remember, the first game that I used a trainer for is StarCraft by Blizzard
+
+06:05.840 --> 06:07.440
+Entertainment.
+
+06:07.440 --> 06:12.600
+So StarCraft is like this role playing game where you, where you are like this general,
+
+06:12.600 --> 06:16.920
+so to say, and you have a lot of units that you can control, but it also has resources
+
+06:16.920 --> 06:18.360
+like minerals and gas.
+
+06:18.360 --> 06:23.560
+And at some point, you know, and this is so before the, you know, this is before the time
+
+06:23.560 --> 06:30.760
+where playing online was even possible where we live, because the Internet was really slow
+
+06:30.760 --> 06:32.880
+at the time.
+
+06:32.880 --> 06:37.840
+And so I was just going to, you know, play a game against the computer and I'm saying
+
+06:37.840 --> 06:42.160
+to myself, OK, the computer beats me and it beats me again and beats me again.
+
+06:42.160 --> 06:49.880
+So you don't try to, you know, as a kid, you kind of try to get around the game by not
+
+06:49.880 --> 06:53.880
+doing the things that you're supposed to do, but by doing the easiest thing.
+
+06:53.880 --> 06:57.720
+So you're not actually learning the game and you don't want to learn the game and become
+
+06:57.720 --> 07:03.280
+better at it, but you just want to beat the computer at no cost, at whatever cost.
+
+07:03.280 --> 07:13.040
+So I remember this trainer was probably by Rezor1911 and it just gives you infinite minerals
+
+07:13.040 --> 07:14.040
+and gas.
+
+07:14.040 --> 07:17.680
+And at this point, you just like launch the application and you build like all of your
+
+07:17.680 --> 07:23.200
+army with, you know, soldiers, tanks, whatever, and you just like smash the computer.
+
+07:23.200 --> 07:30.520
+And this gives, I mean, used to give a sense of accomplishment back then.
+
+07:30.520 --> 07:31.520
+But you're really cheating the game.
+
+07:31.520 --> 07:37.680
+I mean, it's not how the game is supposed to be played, but it's what got me started.
+
+07:37.680 --> 07:38.680
+Yeah.
+
+07:38.680 --> 07:45.200
+Another nostalgia point for Rezor1911 and that those guys have like the best chiptunes
+
+07:45.200 --> 07:46.200
+ever.
+
+07:46.200 --> 07:48.280
+I really love the music of those crackers and stuff.
+
+07:48.280 --> 07:49.880
+That was awesome.
+
+07:49.880 --> 07:57.240
+So let's shift gears to your professional career or let's get started with your studying
+
+07:57.240 --> 07:58.240
+experience.
+
+07:58.240 --> 08:02.640
+How did you actually get the diploma before starting up as a professional programmer?
+
+08:02.640 --> 08:05.080
+Do you have any formal education?
+
+08:05.080 --> 08:06.400
+What's the story there?
+
+08:06.400 --> 08:07.400
+Yeah.
+
+08:07.400 --> 08:14.660
+So like to continue the natural progression talk, I think, you know, after trainers and
+
+08:14.660 --> 08:21.340
+crackers and whatnot, I remember there was this IRC channel on the FNET network.
+
+08:21.340 --> 08:25.200
+So FNET was this like crazy network full of hackers and whatnot.
+
+08:25.200 --> 08:27.080
+You could find a lot of stuff there.
+
+08:27.080 --> 08:31.600
+There were a lot of IRC networks back then, but, you know, like most of them were just
+
+08:31.600 --> 08:36.080
+like, for example, UNDERNET was really just for trolling and chilling around.
+
+08:36.080 --> 08:44.920
+But FNET was really this educational network that I have to say and admit that I learned
+
+08:44.920 --> 08:46.440
+a lot of stuff there.
+
+08:46.440 --> 08:51.460
+And like I said, it started with crackers and trainers, but really, so there were these
+
+08:51.460 --> 08:52.460
+two channels on FNET.
+
+08:52.460 --> 08:53.960
+I don't know if they still exist.
+
+08:53.960 --> 08:59.520
+One of them was cracking for newbies, and then the other one was new to cracking.
+
+08:59.520 --> 09:05.520
+And you would join this channel and people just talk a lot of random stuff like hexadecimal
+
+09:05.520 --> 09:06.520
+codes.
+
+09:06.520 --> 09:14.560
+I don't know, WinAPI, functions that you can use to attach to a process, modifying memory,
+
+09:14.560 --> 09:21.800
+creating an executable that self-modifies, and all of these sort of tricks.
+
+09:21.800 --> 09:25.720
+So I'm like, I don't understand anything of this, you know.
+
+09:25.720 --> 09:33.760
+So at this time, I don't remember I still had like the will to start learning programming,
+
+09:33.760 --> 09:38.560
+but it was just like this, probably at this time is when genuine curiosity started to
+
+09:38.560 --> 09:39.560
+kick in.
+
+09:39.560 --> 09:42.960
+So I'm like, okay, I just want to figure out what this is, you know, I want to understand
+
+09:42.960 --> 09:43.960
+it.
+
+09:43.960 --> 09:44.960
+That's it.
+
+09:44.960 --> 09:46.760
+And eventually I want to write a trainer myself.
+
+09:46.760 --> 09:54.560
+So these two channels from FNET provided that experience for me, which is, you know, there
+
+09:54.560 --> 10:01.360
+are a lot of tutorials by Exilion, I don't remember, Fravia, Ork, there are a lot of
+
+10:01.360 --> 10:06.400
+like famous names that I have completely forgotten most of them by now.
+
+10:06.400 --> 10:14.960
+But I'm getting to your question, which is, when this happens, I'm like 13 or 14 years
+
+10:14.960 --> 10:15.960
+old, right?
+
+10:15.960 --> 10:23.720
+So in basic school, and in high school, the educational system here was, you know, you
+
+10:23.720 --> 10:28.040
+write this basic program, which is really you just read the book, and you just write
+
+10:28.040 --> 10:32.640
+the same contents as it is in the book in the computer, and then something draws.
+
+10:32.640 --> 10:35.000
+But that's as far as education went.
+
+10:35.000 --> 10:40.720
+And in high school, I think it was more like Microsoft Office packages, you know, learning
+
+10:40.720 --> 10:41.720
+how to use a browser.
+
+10:41.720 --> 10:47.280
+So I was like already beyond those stuff, because I was, you know, continuously involved
+
+10:47.280 --> 10:48.800
+with computers.
+
+10:48.800 --> 10:55.800
+So I want to attribute, like the first starting experience to the FNET network, which is learning
+
+10:55.800 --> 10:58.280
+how to crack and write trainers.
+
+10:58.280 --> 11:04.860
+And then in high school, something happened, which is the teacher, like, you know, she's
+
+11:04.860 --> 11:08.960
+teaching other kids, other students, how to use a browser or whatever.
+
+11:08.960 --> 11:12.920
+And then she sees me and she notices something probably that I mean, teachers are probably
+
+11:12.920 --> 11:20.600
+good at that, trying to see like trying to find who's who is different from the others.
+
+11:20.600 --> 11:27.460
+And then she's like, Well, you know, I think you have a very good understanding of computers.
+
+11:27.460 --> 11:28.460
+What do you think about that?
+
+11:28.460 --> 11:31.880
+And I'm like, Well, you know, I spend most of my time on the computer.
+
+11:31.880 --> 11:34.320
+So yeah, probably, I don't know.
+
+11:34.320 --> 11:40.640
+So there is this competitive programming that's happening for high school students.
+
+11:40.640 --> 11:41.640
+Are you interested in it?
+
+11:41.640 --> 11:46.920
+And I'm like, I have no idea what is what it is, you know, I don't know what CP is competitive
+
+11:46.920 --> 11:48.860
+programming release.
+
+11:48.860 --> 11:51.600
+So I'm like, Yeah, why not?
+
+11:51.600 --> 11:53.800
+You know, I'm, she was like something.
+
+11:53.800 --> 11:57.600
+So you know, you don't have to attend other classes, you know, this will be your reward
+
+11:57.600 --> 11:58.600
+for it.
+
+11:58.600 --> 11:59.600
+And I'm like, really?
+
+11:59.600 --> 12:00.600
+So?
+
+12:00.600 --> 12:04.440
+And she's like, you know, I can go to school and just do computers, yes, that will be the
+
+12:04.440 --> 12:06.160
+same thing for like, a couple of weeks.
+
+12:06.160 --> 12:09.480
+And I'm like, I don't care what CP is, I don't care about anything.
+
+12:09.480 --> 12:13.640
+It's computers just, you know, I'm in it.
+
+12:13.640 --> 12:18.000
+And then she's like, Okay, you know, just so she signs me up, she was basically my mentor,
+
+12:18.000 --> 12:19.280
+so to say.
+
+12:19.280 --> 12:27.440
+And then in this competitive, so this was another highlight of my, you know, natural
+
+12:27.440 --> 12:32.720
+progression besides crackers and trainers is when you get to this competitive programming,
+
+12:32.720 --> 12:37.200
+it's like this really now when I think of it, it's like this really high pressure kind
+
+12:37.200 --> 12:44.320
+of environment where you, you know, you just like sit and compete with other kids.
+
+12:44.320 --> 12:48.040
+You know, it's, it's like, you see them, you talk to them, you smile.
+
+12:48.040 --> 12:52.600
+But then when all of you sit on the computer, you're like, I want to crush you, you know,
+
+12:52.600 --> 12:58.840
+so you're like this egoistic little kid that just wants to be best at everything.
+
+12:58.840 --> 13:06.720
+So this is the other, you know, highlight, like I said, where I started to, to learn
+
+13:06.720 --> 13:12.520
+how, you know, how to program how to program fast, the tasks were most mostly algorithmic.
+
+13:12.520 --> 13:19.840
+So, but it still gave me this sense of, okay, you know, this is what programming is about.
+
+13:19.840 --> 13:25.920
+It's, and this is what, you know, you will be doing for the rest of your life.
+
+13:25.920 --> 13:30.440
+And I'm like, well, it's high pressure, but I really enjoyed this.
+
+13:30.440 --> 13:32.880
+You know, I won several, several prizes.
+
+13:32.880 --> 13:37.560
+But regardless of that, it's just that I want to continue doing this.
+
+13:37.560 --> 13:42.600
+And you know, and then I actually started, so this is high school, right?
+
+13:42.600 --> 13:51.520
+And then after high school, I started working professionally, this is in 2010, for a company
+
+13:51.520 --> 13:56.920
+here, which at this time, I don't have like a university degree or whatever, it's just
+
+13:56.920 --> 14:06.240
+like borrow with his high school diplomas from, from the competitive programming thing
+
+14:06.240 --> 14:07.280
+that was organized.
+
+14:07.280 --> 14:10.920
+So I'm like, you know, I need some money.
+
+14:10.920 --> 14:13.920
+So it's this period in my life where I needed some money.
+
+14:13.920 --> 14:16.240
+And I'm like, you know, I'm just gonna start programming.
+
+14:16.240 --> 14:19.120
+And I have a general idea of what programming is.
+
+14:19.120 --> 14:24.920
+But you know, when you start working in a company, it's very unlike competitive programming.
+
+14:24.920 --> 14:27.760
+And I have to admit, I'm happy for that.
+
+14:27.760 --> 14:33.920
+Because I at this age, I don't know if I enjoy high pressure as much as back then.
+
+14:33.920 --> 14:39.000
+Yeah, like competitive programming and professional programming are like entirely different sports.
+
+14:39.000 --> 14:41.360
+I can easily agree to that.
+
+14:41.360 --> 14:42.360
+Yeah.
+
+14:42.360 --> 14:47.720
+And so I forgot to also mention one important thing about all of this progression is I'm
+
+14:47.720 --> 14:54.720
+leaning towards, you know, your initial question is, most of my stuff is things that I have
+
+14:54.720 --> 14:59.600
+learned, you know, self self learning.
+
+14:59.600 --> 15:06.040
+But also, there was another big thing, which is also can be attributed to my parents, which
+
+15:06.040 --> 15:11.800
+we had an internet cafe for 11 years, or 12 years, something like that.
+
+15:11.800 --> 15:18.480
+And it's it was this period, like 99 until 2011, or something like that, where internet
+
+15:18.480 --> 15:25.080
+cafes were the thing, you know, and a huge, a huge amount of my knowledge also comes from
+
+15:25.080 --> 15:29.200
+there where you just do stuff and break stuff.
+
+15:29.200 --> 15:33.840
+And you have like this support from your parents, you know, I don't know, hey, Dad, I broke
+
+15:33.840 --> 15:39.880
+the CPU cooler from this computer, you know, oh, okay, at least you tried fixing it.
+
+15:39.880 --> 15:44.840
+Here's some money, get a new cooler and you know, assemble it.
+
+15:44.840 --> 15:52.760
+And you know, at that time, I didn't feel like it's something you know, that that would
+
+15:52.760 --> 15:55.360
+turn later turn out to be useful in my life.
+
+15:55.360 --> 16:01.640
+But you really realize that these small things are basically the you know, what what caused
+
+16:01.640 --> 16:04.600
+this this large shifts.
+
+16:04.600 --> 16:10.200
+And speaking of school, I, I was really bad at most subjects, except for mathematics and
+
+16:10.200 --> 16:12.640
+informatics, obviously.
+
+16:12.640 --> 16:17.440
+But again, I had this luck from from the competitive program, where all of my grades were sort
+
+16:17.440 --> 16:21.000
+of, quote, unquote, fixed.
+
+16:21.000 --> 16:26.080
+Because you know, I spent all of my time studying for the for the competitions.
+
+16:26.080 --> 16:32.520
+But yeah, university degree came a lot later after after the professional, after I started
+
+16:32.520 --> 16:34.120
+started working professionally, cool.
+
+16:34.120 --> 16:39.840
+So I know that it's sort of a spoiler, I know you're currently into academia, at least partially.
+
+16:39.840 --> 16:41.160
+But yeah, we'll get into that later.
+
+16:41.160 --> 16:44.200
+I don't need to drill down into that just now.
+
+16:44.200 --> 16:49.280
+So yeah, past that point, we actually, well, I actually had the pleasure of working with
+
+16:49.280 --> 16:50.620
+you for a while.
+
+16:50.620 --> 16:53.040
+And it was a fun time back then.
+
+16:53.040 --> 16:59.480
+What's the most important, or rather the most interesting part of that collaboration that
+
+16:59.480 --> 17:01.200
+we had together?
+
+17:01.200 --> 17:04.400
+Yes, this is a very good question.
+
+17:04.400 --> 17:07.320
+Just going to give an extra context here.
+
+17:07.320 --> 17:12.280
+So my first job was really actually working at an, like this outsourcing company that
+
+17:12.280 --> 17:16.920
+a lot of random projects come in, like, I don't know, Java, C sharp, I, you know, Python,
+
+17:16.920 --> 17:19.000
+I don't know whatever else.
+
+17:19.000 --> 17:23.060
+And I've been working there for like three years or something like that.
+
+17:23.060 --> 17:28.280
+But like I said, it's like this outsourcing slash corporate culture.
+
+17:28.280 --> 17:35.680
+And so the company that you and I worked together is was my second job, actually.
+
+17:35.680 --> 17:40.340
+And the way it differed from the first job was that it's a startup, basically.
+
+17:40.340 --> 17:50.040
+So really, I had a very good experience there to be, you know, to feel the beauty of working
+
+17:50.040 --> 17:52.560
+in a startup.
+
+17:52.560 --> 17:57.360
+I have to, I have to tell the listeners that it was my first and my last startup, but regardless
+
+17:57.360 --> 18:06.800
+of that, so startups, I think they, so for sure, they drain a lot of energy from you
+
+18:06.800 --> 18:12.320
+and you have to be like very enthusiastic and you just have to find some source from
+
+18:12.320 --> 18:16.200
+which you drain this energy and you have to be prepared to waste all of your energy in
+
+18:16.200 --> 18:17.200
+there.
+
+18:17.200 --> 18:27.120
+But the best part of working in a startup was, I would say, the freedom to move fast,
+
+18:27.120 --> 18:30.880
+to research, to experiment and do a lot of crazy stuff.
+
+18:30.880 --> 18:38.320
+Like I remember one specific collaboration you and I that we had was we used Libaria,
+
+18:38.320 --> 18:47.400
+which is a library for torrents, like peer-to-peer data transfer, doesn't have to be only files.
+
+18:47.400 --> 18:52.080
+And then so we built like this browser plugin based on the MPAPI.
+
+18:52.080 --> 19:00.340
+I think MPAPI was, it's coming from Netscape, the API, but I think it's obsolete by now.
+
+19:00.340 --> 19:02.320
+So it died with Flash anyway.
+
+19:02.320 --> 19:07.600
+Yeah, it's been sunsetted for sure, at least like six, seven years ago, maybe more.
+
+19:07.600 --> 19:08.600
+Yeah.
+
+19:08.600 --> 19:16.160
+So, and this MPAPI, you know, you and I are just like sitting in this pub drinking some
+
+19:16.160 --> 19:17.160
+beer.
+
+19:17.160 --> 19:22.040
+And I remember, you know, you mentioning, hey, you know, we can speed up the MPAPI video
+
+19:22.040 --> 19:27.520
+player that you built, that you're building together with another coworker by using, by
+
+19:27.520 --> 19:33.640
+integrating Libaria into it and trying to distribute the data that is transferred for
+
+19:33.640 --> 19:38.400
+the video and audio to, you know, between different kinds of viewers.
+
+19:38.400 --> 19:43.920
+So it's like this small projects that, you know, you have the freedom to, you know, to
+
+19:43.920 --> 19:48.480
+experiment with it and something will happen eventually.
+
+19:48.480 --> 19:56.240
+But the thing with startups is that most of the times nothing happens and you have to
+
+19:56.240 --> 20:04.200
+be very careful with how you, you know, waste your energy there and make sure that, you
+
+20:04.200 --> 20:08.920
+know, especially, I don't want to say pay attention to your mental health because I
+
+20:08.920 --> 20:10.240
+was very young at that time.
+
+20:10.240 --> 20:17.000
+But if I were to work in a startup at this age, I'm 34 now, you know, it would be very
+
+20:17.000 --> 20:18.000
+different for me.
+
+20:18.000 --> 20:19.000
+Definitely.
+
+20:19.000 --> 20:20.640
+Yeah, I can agree to that.
+
+20:20.640 --> 20:26.040
+Sort of as a transition question, how would you compare the startup grind culture versus
+
+20:26.040 --> 20:32.480
+the place you're currently working at in terms of like how they compare with pressure, speed,
+
+20:32.480 --> 20:34.920
+expectations, and so on?
+
+20:34.920 --> 20:37.400
+Yes, it's a great question.
+
+20:37.400 --> 20:43.600
+So it's, you know, so I'm working for Automattic right now.
+
+20:43.600 --> 20:45.280
+I've been there for six years.
+
+20:45.280 --> 20:49.640
+It's basically the company behind WordPress, but there are also several other products
+
+20:49.640 --> 20:58.000
+like WooCommerce, Tumblr, Word Ads, Jetpack, so all of those things.
+
+20:58.000 --> 21:03.600
+And the interesting thing about Automattic is, so I joined there six years ago when it
+
+21:03.600 --> 21:08.160
+was, I think I was like employee number 500 something.
+
+21:08.160 --> 21:13.880
+And right now, you know, taking, you know, all the people that have left, all the people
+
+21:13.880 --> 21:19.620
+that all the new people that have joined, you know, it's around 2000 people right now.
+
+21:19.620 --> 21:25.120
+So it definitely grew a lot in this past six years.
+
+21:25.120 --> 21:30.080
+It's just, it's a good question because Automattic itself considers internally, it considers
+
+21:30.080 --> 21:33.040
+itself as a startup, which is funny.
+
+21:33.040 --> 21:39.760
+I would not call it a corporation, but also I would not call it an early startup as well.
+
+21:39.760 --> 21:44.400
+I would say somewhere in between in that, right, so you have, you still have the freedom
+
+21:44.400 --> 21:51.440
+to like introduce new processes and do changes and make impact, you have this option.
+
+21:51.440 --> 21:59.440
+But at the same time, and there is chaos, of course, but at the same time, you're not
+
+21:59.440 --> 22:08.040
+strictly controlled or strictly bound by these processes, which most corporations tend to,
+
+22:08.040 --> 22:14.200
+you know, get like themselves stuck, you know, so me working in a corporation, what I found
+
+22:14.200 --> 22:20.040
+out is that most of the processes that are there are just there for, for the sake of
+
+22:20.040 --> 22:21.040
+a process.
+
+22:21.040 --> 22:23.720
+And it's just like making things complex.
+
+22:23.720 --> 22:29.440
+So and in startups, most of the times you don't even have processes.
+
+22:29.440 --> 22:36.040
+So right, Automattic is somewhere in between, I like to think that everybody can make a
+
+22:36.040 --> 22:39.520
+change to the process as long as it makes sense, as long as it's debated, and as long
+
+22:39.520 --> 22:43.320
+as it can be, you know, justified the decision.
+
+22:43.320 --> 22:48.720
+And at the same time, it's the chaos, we try to give, to bring some control to the chaos,
+
+22:48.720 --> 22:55.280
+but I, you know, it's not like it's unlike a startup, and it's not like a corporation.
+
+22:55.280 --> 22:57.200
+I hope that answers the question.
+
+22:57.200 --> 23:00.320
+Yeah, it paints an interesting picture for sure.
+
+23:00.320 --> 23:05.720
+I'm going to switch gears to your current job description.
+
+23:05.720 --> 23:10.200
+And you're not actually doing much programming these days, are you?
+
+23:10.200 --> 23:12.320
+I mean, professionally?
+
+23:12.320 --> 23:13.320
+Yes.
+
+23:13.320 --> 23:18.840
+Oh, yeah, it's, you know, yeah, I mean, you know, when you start asking questions like
+
+23:18.840 --> 23:24.000
+that, it's, it's like very, very hard to give like precise answer, because now we have to
+
+23:24.000 --> 23:25.760
+define what programming means.
+
+23:25.760 --> 23:31.480
+And I agree with you, the definition of programming for me has quite changed in the past period
+
+23:31.480 --> 23:37.000
+for what's happened is so like I said, six years at Automattic, the first four years
+
+23:37.000 --> 23:43.360
+were mostly product work, you know, doing some research, working on a product, doing
+
+23:43.360 --> 23:49.920
+bug fixes, security fixes, whatever customers give you, you know, user stories, you address
+
+23:49.920 --> 23:52.440
+those, you make customers happy.
+
+23:52.440 --> 24:01.000
+And so something happened two years ago, where Automattic has this culture of like role switches.
+
+24:01.000 --> 24:05.520
+And I'm like, you know, I get pinged by this random person that says, hey, you know, we
+
+24:05.520 --> 24:11.400
+have like this role that you might be interested in, maybe not, but we just want to let you
+
+24:11.400 --> 24:13.600
+know that it's a thing.
+
+24:13.600 --> 24:18.320
+It's basically for you to help us on the hiring part of hiring engineers.
+
+24:18.320 --> 24:19.320
+Right?
+
+24:19.320 --> 24:23.160
+So I'm like, wait, hiring engineers, what does that mean?
+
+24:23.160 --> 24:28.440
+Oh, you know, you, you know, people who apply on Automattic, you will talk to them, you
+
+24:28.440 --> 24:31.560
+will work with them, you will evaluate them.
+
+24:31.560 --> 24:36.200
+And I'm like, so this is going to take three months.
+
+24:36.200 --> 24:40.200
+It's like, you know, like they call it rotation internally.
+
+24:40.200 --> 24:44.480
+So three months and I'm like, but wait, you know, I don't know any of these things.
+
+24:44.480 --> 24:50.400
+I'm interested in it, but I don't know any of that, any of the things you mentioned.
+
+24:50.400 --> 24:57.400
+And the person was like, well, that's the point of the rotation is for us to teach you.
+
+24:57.400 --> 25:00.640
+And you know, I'm like, oh, this is getting better for sure.
+
+25:00.640 --> 25:07.160
+And so three months, I mean, you know, so I do my, you know, I hand off all the stuff
+
+25:07.160 --> 25:13.120
+that I'm working on, documentation, API, finishing all the remaining work.
+
+25:13.120 --> 25:18.320
+And then, you know, I'm like, okay, I'm just going to need like a week or two, and then
+
+25:18.320 --> 25:22.280
+I can start three months and then I'm back in into my previous team.
+
+25:22.280 --> 25:23.280
+Sure.
+
+25:23.280 --> 25:24.560
+Sounds like a good idea.
+
+25:24.560 --> 25:31.920
+And then what happens is the first few months is where you actually, we have like this.
+
+25:31.920 --> 25:37.200
+So like I said, you know, we have like these processes internally that are not strictly
+
+25:37.200 --> 25:42.200
+defined, but they have like their own freedom in which, you know, so there was this process
+
+25:42.200 --> 25:49.720
+of shadowing and most of the stuff in the first few months was me mostly learning stuff.
+
+25:49.720 --> 25:55.520
+So it's not like I really evaluated any candidate or interview or whatever, but it was mostly
+
+25:55.520 --> 25:59.360
+me being there shadowing and seeing what the other person does.
+
+25:59.360 --> 26:04.880
+And you know, it's like this basically learn by doing or learn by watching and you know,
+
+26:04.880 --> 26:09.000
+and you repeat like what monkeys do, for example.
+
+26:09.000 --> 26:15.960
+And so I'm like, you know, three months go by and I'm like, oh, you know, it's, you know,
+
+26:15.960 --> 26:20.440
+it's a lot of stuff I have absorbed.
+
+26:20.440 --> 26:24.960
+And what I do next is I just write like this reflection post.
+
+26:24.960 --> 26:32.480
+We have like this internal blog posting mechanism at Automatic, which, you know, depending on
+
+26:32.480 --> 26:39.760
+we have a lot of P2s where, you know, one P2 might be related to marketing research
+
+26:39.760 --> 26:41.560
+and other to code research, whatever.
+
+26:41.560 --> 26:46.360
+So we have a P2 for hiring and then I'm writing like this reflection post.
+
+26:46.360 --> 26:54.480
+And as I'm writing it, I figure that, wait, so I learned all of this stuff as to, you
+
+26:54.480 --> 26:59.440
+know, what it means to evaluate a candidate, for example, you know, asking questions, asking
+
+26:59.440 --> 27:05.240
+the right questions that that was my biggest, my biggest gain, I would say, you know.
+
+27:05.240 --> 27:10.080
+And then if you ask this question, what response do you expect?
+
+27:10.080 --> 27:14.480
+What information do you give with the very own question that you're asking?
+
+27:14.480 --> 27:15.480
+That's one example.
+
+27:15.480 --> 27:22.440
+You know, another example is evaluating their, you know, the candidate's research qualities
+
+27:22.440 --> 27:24.040
+or communication qualities.
+
+27:24.040 --> 27:26.640
+So what does it mean to even communicate?
+
+27:26.640 --> 27:36.160
+And you know, it starts a bit getting into this like philosophy around, you know, programming
+
+27:36.160 --> 27:41.160
+and like what you said, you know, do less programming, but do more of the stuff that
+
+27:41.160 --> 27:42.560
+is about programming.
+
+27:42.560 --> 27:43.560
+So right.
+
+27:43.560 --> 27:49.960
+You know, you just like take a step back and you go on this meta level that you say, OK,
+
+27:49.960 --> 27:54.320
+I'm not going to do programming, but I'm going to do stuff about programming.
+
+27:54.320 --> 28:02.360
+And so like three months in the rotation, I did nothing productive here besides me learning.
+
+28:02.360 --> 28:03.400
+I want to stay more.
+
+28:03.400 --> 28:06.440
+I want to I want to actually apply the stuff that I learned.
+
+28:06.440 --> 28:11.960
+So, you know, it's like you buy, I don't know, a shovel and then somebody teaches you how
+
+28:11.960 --> 28:12.960
+to use it.
+
+28:12.960 --> 28:15.400
+And then you're like, OK, you know, I'm selling this show.
+
+28:15.400 --> 28:16.400
+I know how to use it.
+
+28:16.400 --> 28:17.400
+And that's it.
+
+28:17.400 --> 28:20.240
+But you really want to build a house, right?
+
+28:20.240 --> 28:26.560
+So we decide internally that I should extend my rotation to another six months.
+
+28:26.560 --> 28:33.440
+And at this time is where you actually get to apply all the quote unquote theoretical
+
+28:33.440 --> 28:39.920
+parts that you that you learn and practice is, you know, practice makes perfect.
+
+28:39.920 --> 28:46.800
+And this is where I realized, wait, I don't really want to go back to programming.
+
+28:46.800 --> 28:49.520
+I want to stay here and I want to be doing this.
+
+28:49.520 --> 28:52.440
+This is actually a really good driver for me.
+
+28:52.440 --> 28:53.920
+I'm learning a lot of new stuff.
+
+28:53.920 --> 29:00.640
+I'm, you know, working with people, working with random people, seeing random solutions,
+
+29:00.640 --> 29:04.680
+trying to understand why people arrived with that solution.
+
+29:04.680 --> 29:08.920
+What were they thinking when they wrote all of this code?
+
+29:08.920 --> 29:11.360
+How could have they done it differently?
+
+29:11.360 --> 29:16.160
+So all of these things kind of like, you know, it starts getting closer and closer to the
+
+29:16.160 --> 29:17.160
+philosophy.
+
+29:17.160 --> 29:24.080
+And to this day, we decided to stop the rotation and do like the full roll switch and yes,
+
+29:24.080 --> 29:26.960
+I'm now part of the developer experience at Automatic.
+
+29:26.960 --> 29:33.440
+We're still working with hiring, but also other stuff like, you know, tweaking internal
+
+29:33.440 --> 29:40.960
+processes, working on tooling, developer mentorship, just started doing that a few weeks ago.
+
+29:40.960 --> 29:45.720
+So yeah, I'm definitely still excited about the position and I'm still learning.
+
+29:45.720 --> 29:49.400
+And I'm happy to be there.
+
+29:49.400 --> 29:50.400
+Glad to hear that.
+
+29:50.400 --> 29:53.800
+And that's an awesome transition to my next question, actually.
+
+29:53.800 --> 29:59.400
+Currently Devex and DevRel and all of the dev star professions are sort of a hot topic.
+
+29:59.400 --> 30:01.120
+To you, what does Devex mean?
+
+30:01.120 --> 30:06.720
+How would you describe it in layman's terms, let's say?
+
+30:06.720 --> 30:09.080
+Yes.
+
+30:09.080 --> 30:12.320
+It's another good question, I would say.
+
+30:12.320 --> 30:17.480
+My take of it is, I don't know if I can give a general definition of it, but my take on
+
+30:17.480 --> 30:24.800
+it is that Devex, DevRel, whatever you want to call it, is closely tied to the company
+
+30:24.800 --> 30:25.800
+culture, right?
+
+30:25.800 --> 30:31.000
+So what I mean by this is every company has its own culture that they are trying to follow,
+
+30:31.000 --> 30:32.400
+like a mission statement or whatever.
+
+30:32.400 --> 30:36.400
+And I used to be very skeptical of those things when I was younger, like, you know, who needs
+
+30:36.400 --> 30:39.760
+this BS or whatever.
+
+30:39.760 --> 30:46.180
+But there is a lot of value in that, which once you define this, it will dictate most
+
+30:46.180 --> 30:49.840
+of the parts that will be happening in your company, right?
+
+30:49.840 --> 30:54.360
+So for example, Automatic has this creed, which it's a long creed, but one of the parts
+
+30:54.360 --> 30:55.880
+is communication is oxygen.
+
+30:55.880 --> 31:04.120
+So it really means that Automatic, given it's a remote and distributed company with people
+
+31:04.120 --> 31:10.320
+working from all across the globe and our main tools are Slack and GitHub and Zoom.
+
+31:10.320 --> 31:16.920
+So if you cannot communicate, you know, not much can happen.
+
+31:16.920 --> 31:24.120
+So back to the question, I think Devex and how it relates actually to hiring, for example,
+
+31:24.120 --> 31:27.560
+at Automatic, we pay a lot of attention to how people communicate.
+
+31:27.560 --> 31:32.240
+And we also set the expectations and give them context around how we do it at Automatic.
+
+31:32.240 --> 31:38.120
+You know, obviously you cannot force a person to communicate this way or do that way or
+
+31:38.120 --> 31:45.480
+do this the other way, but we give them information as far, you know, this is how things work
+
+31:45.480 --> 31:46.920
+at Automatic.
+
+31:46.920 --> 31:52.200
+So this dictates, for example, the hiring process.
+
+31:52.200 --> 31:55.760
+And then another part of the creed is I will never stop learning.
+
+31:55.760 --> 32:01.080
+So Automatic says something like, you know, we will pay you a lot of money for your self
+
+32:01.080 --> 32:03.000
+growth, for whatever.
+
+32:03.000 --> 32:11.240
+So by nature, you know, this program of developer mentorship gets born and then it's really
+
+32:11.240 --> 32:12.680
+driven by the culture, right?
+
+32:12.680 --> 32:18.680
+So I will never stop learning is basically the developer mentorship, which is still under
+
+32:18.680 --> 32:21.280
+the umbrella of Devex.
+
+32:21.280 --> 32:31.600
+So to give a short answer, I think don't pay attention to a lot, I mean, obviously, no,
+
+32:31.600 --> 32:37.680
+it's all about people and about computers, Devex and DevRel, like you wrote on your one
+
+32:37.680 --> 32:41.360
+of your blog posts that, you know, developer relations.
+
+32:41.360 --> 32:46.840
+But at the same time, if you want to get closer to what it really means to be doing DevRel
+
+32:46.840 --> 32:57.280
+is start at the top, which is the company culture, and then, you know, go bottom to
+
+32:57.280 --> 33:01.560
+the Atom level, to the unit level, which is basically the programmer and the employees.
+
+33:01.560 --> 33:12.520
+And in my understanding, Devex and DevRel, what they do is they sort of bring the culture,
+
+33:12.520 --> 33:15.560
+they're like this law enforcement of culture.
+
+33:15.560 --> 33:22.360
+I don't want to use the word enforcement, I think it's too harsh of a word, but something
+
+33:22.360 --> 33:28.920
+that would give other people, you know, so what happens is usually programmers, they
+
+33:28.920 --> 33:35.800
+are like in this everyday cycle where they program, code, test, review, QA, repeat.
+
+33:35.800 --> 33:41.020
+It's very easy to forget what company is it you're working for, what are your options
+
+33:41.020 --> 33:43.280
+for self growth, all of those stuff.
+
+33:43.280 --> 33:50.800
+So I think there needs to be someone there to, like, what got me here to the hiring rotation
+
+33:50.800 --> 33:51.800
+is I got pinged.
+
+33:51.800 --> 33:56.360
+It was a thing in automatic, but I was so busy with my day-to-day activities that I'm
+
+33:56.360 --> 34:01.400
+like, you know, I don't know what else, you know, what options automatic gives.
+
+34:01.400 --> 34:06.560
+So like DevEx, DevRel to me is where, you know, there are a group of people that take
+
+34:06.560 --> 34:12.320
+the culture and, you know, they just like try to spread it among the people.
+
+34:12.320 --> 34:16.760
+And you know, like this is the, like when you go to a new city and visit, you know,
+
+34:16.760 --> 34:21.440
+you pay attention to the architecture, to the culture, but you do that on purpose when
+
+34:21.440 --> 34:22.960
+you're a tourist.
+
+34:22.960 --> 34:27.080
+But DevEx is like this tourist guide for the company.
+
+34:27.080 --> 34:28.080
+This is my take on it.
+
+34:28.080 --> 34:29.080
+Cool.
+
+34:29.080 --> 34:30.080
+Cool.
+
+34:30.080 --> 34:31.080
+Okay.
+
+34:31.080 --> 34:34.360
+That's an interesting thing that would easily describe like what for the most part internal
+
+34:34.360 --> 34:35.440
+DevRels do.
+
+34:35.440 --> 34:37.520
+And I do agree with that definition.
+
+34:37.520 --> 34:41.900
+It's interesting that you mentioned tourism and tourists because you recently had a sabbatical.
+
+34:41.900 --> 34:48.080
+And can you tell us more about what a sabbatical is and how they work inside Automattic?
+
+34:48.080 --> 34:49.800
+Yes.
+
+34:49.800 --> 35:12.260
+So yeah, I started working professionally in 2010 and my first sabbatical was in 2011.
+

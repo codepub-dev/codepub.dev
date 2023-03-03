@@ -1,0 +1,78 @@
+<div class="w-full flex items-center flex-col pt-10 lg:pr-28 max-h-[170px]">
+  <div
+    class="text-6xl md:text-8xl font-light text-center mb-9 inline-flex"
+    style={{
+      fontFamily: 'Monoton',
+      color: '#fee',
+      textShadow: '0 -40px 100px, 0 0 2px, 0 0 1em #ffbe0b, 0 0 0.5em #ffbe0b, 0 0 0.1em #ffbe0b, 0 5px 3px #000',
+    }}
+  >
+    c
+    <span class="blinking-letter">o</span>
+    de
+    <span class="blinking-letter">p</span>
+    ub
+  </div>
+  <div class="relative w-[500px]">
+    <div
+      class="absolute text-4xl xl:text-5xl w-[280px] top-[-45px] right-[0px] rotate-[-8deg]"
+      style={{
+        fontFamily: 'calligraffitti',
+        color: '#fef',
+        textShadow: '0 -40px 100px, 0 0 2px, 0 0 1em #ffbeff, 0 0 0.5em #ffbeff, 0 0 0.1em #ffbeff, 0 5px 3px #000',
+      }}
+    >
+      Code on tap
+    </div>
+  </div>
+</div>
+
+<style>
+  .blinking-letter {
+    animation: blink linear infinite 2s;
+  }
+
+  .blinking-letter:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+  }
+
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+
+    79% {
+      color: #333;
+    }
+
+    80% {
+      text-shadow: none;
+    }
+
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+</style>

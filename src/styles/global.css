@@ -3,54 +3,13 @@
 @tailwind utilities;
 
 body {
-	font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+  --plyr-color-main: rgba(31, 41, 55, 1);
+  /* --plyr-audio-controls-background: #fee; */
+  --plyr-control-icon-size: 24px;
 }
 
-.blinking-letter {
-	animation: blink linear infinite 2s;
-}
-
-.blinking-letter:nth-of-type(2) {
-	animation: blink linear infinite 3s;
-}
-
-@keyframes blink {
-	78% {
-		color: inherit;
-		text-shadow: inherit;
-	}
-
-	79% {
-		color: #333;
-	}
-
-	80% {
-
-		text-shadow: none;
-	}
-
-	81% {
-		color: inherit;
-		text-shadow: inherit;
-	}
-
-	82% {
-		color: #333;
-		text-shadow: none;
-	}
-
-	83% {
-		color: inherit;
-		text-shadow: inherit;
-	}
-
-	92% {
-		color: #333;
-		text-shadow: none;
-	}
-
-	92.5% {
-		color: inherit;
-		text-shadow: inherit;
-	}
+.plyr__controls {
+  padding: 0 !important;
 }
