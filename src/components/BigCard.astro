@@ -15,7 +15,7 @@ interface Props {
 
 const { title, image, season, episode, file, url, date, newEpisode } = Astro.props;
 
-const formatted = format(new Date(date), 'yyyy-mm-dd');
+const formatted = format(new Date(date), 'yyyy-MM-dd');
 ---
 
 <article
